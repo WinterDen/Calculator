@@ -8,7 +8,14 @@ firstValue = input("First Value: ")
 # Set the second value as 0 to be updated later
 secondValue = 0
 # Asks what operation the user wants
-question = input("What do you want?\n 1 - Add\n 2 - Sub\n 3 - Mult\n 4 - Div\n 5 - Percentage\n 6 - Square Root\n  Insert number: ")
+question = input("What do you want?\n "
+                 "1 - Add\n "
+                 "2 - Sub\n "
+                 "3 - Mult\n "
+                 "4 - Div\n "
+                 "5 - Percentage\n "
+                 "6 - Square Root\n  "
+                 "Insert number: ")
 # Set the firstValue as an int
 int_first = int(firstValue)
 
@@ -26,6 +33,8 @@ elif question == '2':
     print(f"The result of your subtraction is: {int_first - int_second}")
 elif question == '3':
     print(f"The result of your multiplication is: {int_first * int_second}")
+elif question == '4' and int_second == 0:
+    print("Cannot divide by 0")
 elif question == '4':
     print(f"The result of your division is: {int_first / int_second}")
 elif question == '5':
