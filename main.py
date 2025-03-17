@@ -17,29 +17,29 @@ question = input("What do you want?\n "
                  "6 - Square Root\n  "
                  "Insert number: ")
 # Set the firstValue as an int
-int_first = int(firstValue)
+int_first = float(firstValue)
 
 # If the operation is the square root, it doesn't ask for a second number, otherwise it asks for it
 if  question == '6':
-    secondValue = int(int_first)
+    secondValue = float(int_first)
 else:
     secondValue = input("Second Value:")
 # Set the secondValue as an int
-int_second = int(secondValue)
+int_second = float(secondValue)
 # If the user wants to do a certain operation it follows with the assigned operation, otherwise it inputs an error
 if question == '1':
-    print(f"The result of your addition is: {int_first + int_second}")
+    print(f"The result of your addition is: {round(int_first) + round(int_second)}")
 elif question == '2':
-    print(f"The result of your subtraction is: {int_first - int_second}")
+    print(f"The result of your subtraction is: {round(int_first) - round(int_second)}")
 elif question == '3':
-    print(f"The result of your multiplication is: {int_first * int_second}")
+    print(f"The result of your multiplication is: {round(int_first) * round(int_second)}")
 elif question == '4' and int_second == 0:
     print("Cannot divide by 0")
 elif question == '4':
-    print(f"The result of your division is: {int_first / int_second}")
+    print(f"The result of your division is: {round(int_first) / round(int_second)}")
 elif question == '5':
-    print(f"The percentage of {int_first}% of {int_second} is {int_first / 100 * int_second}")
+    print(f"The percentage of {round(int_first)}% of {round(int_second)} is {round(int_first) / 100 * round(int_second)}")
 elif question == '6':
-    print(f"The result of your square root is: {int_first * int_second}")
+    print(f"The result of your square root is: {round(int_first) * round(int_second)}")
 else:
     print("Do not compute")
